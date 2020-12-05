@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6f3b7ae1-4ded-4b72-8065-b601451ca86d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8888/Reservasi" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Reservasi.xsd" MetadataType="Schema" ID="6bb71e3b-4764-4251-8533-08692e69577c" SourceId="1" SourceUrl="http://localhost:8888/Reservasi?xsd=xsd1" />
+    <MetadataFile FileName="Reservasi.disco" MetadataType="Disco" ID="fc17d982-4bef-4fc6-bfa1-8c6730e672b0" SourceId="1" SourceUrl="http://localhost:8888/Reservasi?disco" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="0d4734b9-4b6e-4a46-a7d2-b09e1f100f1f" SourceId="1" SourceUrl="http://localhost:8888/Reservasi?wsdl" />
+    <MetadataFile FileName="Reservasi1.xsd" MetadataType="Schema" ID="b2e4ea54-4000-41ac-b904-2f5791516893" SourceId="1" SourceUrl="http://localhost:8888/Reservasi?xsd=xsd0" />
+    <MetadataFile FileName="Reservasi2.xsd" MetadataType="Schema" ID="abdb1584-40bd-4c69-93c9-01a792588586" SourceId="1" SourceUrl="http://localhost:8888/Reservasi?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
