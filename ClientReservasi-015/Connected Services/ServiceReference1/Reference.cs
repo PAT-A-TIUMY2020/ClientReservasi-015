@@ -297,10 +297,10 @@ namespace ClientReservasi_015.ServiceReference1 {
     public interface IService1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/pemesanan", ReplyAction="http://tempuri.org/IService1/pemesananResponse")]
-        string pemesanan(string IDPemesanan, string NamaCustomer, string NoTelepon, string JumlahPemesan, string IDLokasi);
+        string pemesanan(string IDPemesanan, string NamaCustomer, string NoTelepon, int JumlahPemesan, string IDLokasi);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/pemesanan", ReplyAction="http://tempuri.org/IService1/pemesananResponse")]
-        System.Threading.Tasks.Task<string> pemesananAsync(string IDPemesanan, string NamaCustomer, string NoTelepon, string JumlahPemesan, string IDLokasi);
+        System.Threading.Tasks.Task<string> pemesananAsync(string IDPemesanan, string NamaCustomer, string NoTelepon, int JumlahPemesan, string IDLokasi);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/editPemesanan", ReplyAction="http://tempuri.org/IService1/editPemesananResponse")]
         string editPemesanan(string IDPemesanan, string NamaCustomer, string No_telepon);
@@ -388,11 +388,11 @@ namespace ClientReservasi_015.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public string pemesanan(string IDPemesanan, string NamaCustomer, string NoTelepon, string JumlahPemesan, string IDLokasi) {
+        public string pemesanan(string IDPemesanan, string NamaCustomer, string NoTelepon, int JumlahPemesan, string IDLokasi) {
             return base.Channel.pemesanan(IDPemesanan, NamaCustomer, NoTelepon, JumlahPemesan, IDLokasi);
         }
         
-        public System.Threading.Tasks.Task<string> pemesananAsync(string IDPemesanan, string NamaCustomer, string NoTelepon, string JumlahPemesan, string IDLokasi) {
+        public System.Threading.Tasks.Task<string> pemesananAsync(string IDPemesanan, string NamaCustomer, string NoTelepon, int JumlahPemesan, string IDLokasi) {
             return base.Channel.pemesananAsync(IDPemesanan, NamaCustomer, NoTelepon, JumlahPemesan, IDLokasi);
         }
         

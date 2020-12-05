@@ -31,7 +31,7 @@ namespace ClientReservasi_015
             int JumlahPemesan = int.Parse(textBoxJumlah.Text);
             string IDLokasi = textBoxIDLokasi.Text;
 
-            var a = service.pemesanan(IDPemesanan, NamaCustomer, NoTelepon, JumlahPemesan.ToString(), IDLokasi);
+            var a = service.pemesanan(IDPemesanan, NamaCustomer, NoTelepon, JumlahPemesan, IDLokasi);
             MessageBox.Show(a);
             TampillData();
             Clear();
@@ -82,9 +82,9 @@ namespace ClientReservasi_015
         {
             textBoxID.Text = Convert.ToString(dtPemesanan.Rows[e.RowIndex].Cells[0].Value);
             textBoxNama.Text = Convert.ToString(dtPemesanan.Rows[e.RowIndex].Cells[3].Value);
-            textBoxNoTlf.Text = Convert.ToString(dtPemesanan.Rows[e.RowIndex].Cells[2].Value);
+            textBoxNoTlf.Text = Convert.ToString(dtPemesanan.Rows[e.RowIndex].Cells[4].Value);
             textBoxJumlah.Text = Convert.ToString(dtPemesanan.Rows[e.RowIndex].Cells[1].Value);
-            textBoxIDLokasi.Text = Convert.ToString(dtPemesanan.Rows[e.RowIndex].Cells[4].Value);
+            textBoxIDLokasi.Text = Convert.ToString(dtPemesanan.Rows[e.RowIndex].Cells[2].Value);
 
             textBoxJumlah.Enabled = false;
             textBoxIDLokasi.Enabled = false;
@@ -94,6 +94,16 @@ namespace ClientReservasi_015
             btHapus.Enabled = true;
 
             textBoxID.Enabled = false;
+        }
+
+        private void btHapus_Click(object sender, EventArgs e)
+        {
+            string IDPemesanan = textBoxID.Text;
+
+            var a = service.deletePemesanan(IDPemesanan);
+            MessageBox.Show(a);
+            TampillData();
+            Clear();
         }
     }
 }

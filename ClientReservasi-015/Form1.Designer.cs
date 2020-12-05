@@ -154,6 +154,7 @@
             this.btHapus.TabIndex = 12;
             this.btHapus.Text = "Hapus";
             this.btHapus.UseVisualStyleBackColor = true;
+            this.btHapus.Click += new System.EventHandler(this.btHapus_Click);
             // 
             // btClear
             // 
